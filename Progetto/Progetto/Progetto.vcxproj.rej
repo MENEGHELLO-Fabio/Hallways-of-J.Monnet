@@ -1,0 +1,15 @@
+diff a/Progetto/Progetto/Progetto.vcxproj b/Progetto/Progetto/Progetto.vcxproj	(rejected hunks)
+@@ -132,6 +132,13 @@
+   <ItemGroup>
+     <ClInclude Include="immediate2d.h" />
+   </ItemGroup>
++  <ItemGroup>
++    <Image Include="sfondo.png" />
++    <Image Include="sprite_fermo.png" />
++    <Image Include="sprite_fermo_right.png" />
++    <Image Include="sprite_pugno.png" />
++    <Image Include="sprite_pugno_right.png" />
++  </ItemGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+   <ImportGroup Label="ExtensionTargets">
+   </ImportGroup>
