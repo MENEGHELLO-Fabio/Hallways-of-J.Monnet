@@ -6,6 +6,17 @@
 
 using Image = int;
 
+static constexpr const char BgPng[] = "sfondo.png";
+static constexpr const char SpriteStatic[] = "sprite_fermo.png";
+static constexpr const char SpritePunch[] = "sprite_pugno.png";
+static constexpr const char SpriteStaticRight[] = "sprite_fermo_right.png";
+static constexpr const char SpritePunchRight[] = "sprite_pugno_right.png";
+
+
+
+int EnemyMovementX(int EnemyX, int SpriteX);
+int EnemyMovementY(int EnemyY, int SpriteY);
+
 void run()
 {
     int x = 0;
@@ -13,19 +24,17 @@ void run()
     int delay = 20;
     int SpriteX = 0;
     int SpriteY = 437;
+	int EnemyX = 400;
+	int EnemyY = 437;
     
-
-    static constexpr const char BgPng[] = "sfondo.png";
-    static constexpr const char SpriteStatic[] = "sprite_fermo.png";
-    static constexpr const char SpritePunch[] = "sprite_pugno.png";
-    static constexpr const char SpriteStaticRight[] = "sprite_fermo_right.png";
-    static constexpr const char SpritePunchRight[] = "sprite_pugno_right.png";
-
     const Image Background = LoadImage(BgPng);
     const Image stat = LoadImage(SpriteStatic);
     const Image punch = LoadImage(SpritePunch);
     /*const Image stat = LoadImage(SpriteStatic);
     const Image punch = LoadImage(SpritePunch);*/
+
+
+    
 
     char ultimotasto;
 
@@ -36,13 +45,11 @@ void run()
         DrawImage(x, y, Background);
         switch (ultimotasto) {
         case ' ':
-            x--;
+            
             DrawImage(x, y, Background);
-            x--;
+            
             DrawImage(SpriteX, SpriteY, punch);
-            x--;
-            Wait(100);
-            x--;
+            
             break;
         case 'w':
             for (int i = 0; i < 5; i++) {
@@ -67,17 +74,53 @@ void run()
             }
             break;
         }
+		
+
+
+
 
         
         DrawImage(x, y, Background);
         DrawImage(SpriteX, SpriteY, stat);
+        
+		EnemyX = EnemyMovementX(EnemyX, SpriteX);
+		EnemyY = EnemyMovementY(EnemyY, SpriteY);
 
-
+		DrawImage(EnemyX, EnemyY, stat);
        
         Wait(delay);
-        x--;
+        
       
     }
 
     
+}
+
+int EnemyMovementX(int EnemyX, int SpriteX) {
+	if (EnemyX > SpriteX) {
+
+			EnemyX -= 1;
+		
+	}
+	else if (EnemyX < SpriteX) {
+		
+			EnemyX += 1;
+		
+	}
+
+    return EnemyX;
+}
+int EnemyMovementY(int EnemyY, int SpriteY) {
+    if (EnemyY > SpriteY) {
+
+        EnemyY -= 1;
+
+    }
+    else if (EnemyY < SpriteY) {
+
+        EnemyY += 1;
+
+    }
+
+    return EnemyY;
 }
