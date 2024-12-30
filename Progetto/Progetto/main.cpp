@@ -24,9 +24,9 @@ void run()
     int delay = 20;
     int SpriteX = 0;
     int SpriteY = 437;
-	int EnemyX = 400;
-	int EnemyY = 437;
-    
+    int EnemyX = 400;
+    int EnemyY = 437;
+
     const Image Background = LoadImage(BgPng);
     const Image stat = LoadImage(SpriteStatic);
     const Image punch = LoadImage(SpritePunch);
@@ -34,7 +34,7 @@ void run()
     const Image punch = LoadImage(SpritePunch);*/
 
 
-    
+
 
     char ultimotasto;
 
@@ -42,14 +42,28 @@ void run()
         ultimotasto = LastKey();
         Clear();
 
+
+        if (SpriteX < 0) {
+            Clear(Black);
+            DrawString(256, 256, "SEI UN CODARDO", "Arial", 24, Red, true);
+            Present();
+            Wait(2000);
+            DrawString(256, 256, "GAME OVER", "Arial", 24, Red, true);
+            Present();
+            Wait(2000);
+            break;
+        }
+
+
+
         DrawImage(x, y, Background);
         switch (ultimotasto) {
         case ' ':
-            
+
             DrawImage(x, y, Background);
-            
+
             DrawImage(SpriteX, SpriteY, punch);
-            
+
             break;
         case 'w':
             for (int i = 0; i < 5; i++) {
@@ -58,13 +72,14 @@ void run()
             break;
         case 's':
             for (int i = 0; i < 5; i++) {
-                SpriteY+=1;
+                SpriteY += 1;
             }
             break;
         case 'a':
             for (int i = 0; i < 5; i++) {
 
                 SpriteX -= 1;
+
             }
             break;
         case 'd':
@@ -74,39 +89,40 @@ void run()
             }
             break;
         }
-		
 
 
 
 
-        
+
+
+
         DrawImage(x, y, Background);
         DrawImage(SpriteX, SpriteY, stat);
-        
-		EnemyX = EnemyMovementX(EnemyX, SpriteX);
-		EnemyY = EnemyMovementY(EnemyY, SpriteY);
 
-		DrawImage(EnemyX, EnemyY, stat);
-       
+        EnemyX = EnemyMovementX(EnemyX, SpriteX);
+        EnemyY = EnemyMovementY(EnemyY, SpriteY);
+
+        DrawImage(EnemyX, EnemyY, stat);
+
         Wait(delay);
-        
-      
+
+
     }
 
-    
+
 }
 
 int EnemyMovementX(int EnemyX, int SpriteX) {
-	if (EnemyX > SpriteX) {
+    if (EnemyX > SpriteX) {
 
-			EnemyX -= 1;
-		
-	}
-	else if (EnemyX < SpriteX) {
-		
-			EnemyX += 1;
-		
-	}
+        EnemyX -= 1;
+
+    }
+    else if (EnemyX < SpriteX) {
+
+        EnemyX += 1;
+
+    }
 
     return EnemyX;
 }
