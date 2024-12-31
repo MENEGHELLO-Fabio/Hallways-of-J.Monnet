@@ -16,9 +16,14 @@ static constexpr const char SpritePunchRight[] = "sprite_pugno_right.png";
 
 int EnemyMovementX(int EnemyX, int SpriteX);
 int EnemyMovementY(int EnemyY, int SpriteY);
+void MenuIniziale();
+
 
 void run()
 {
+
+    MenuIniziale();
+
     int x = 0;
     int y = -512;
     int delay = 20;
@@ -38,7 +43,11 @@ void run()
 
     char ultimotasto;
 
+    
+    
+
     while (true) {
+
         ultimotasto = LastKey();
         Clear();
 
@@ -138,4 +147,19 @@ int EnemyMovementY(int EnemyY, int SpriteY) {
     }
 
     return EnemyY;
+}
+
+void MenuIniziale()
+{
+    Clear(Black);
+    DrawString(256, 200, "BENVENUTO SU", "Arial", 25, Red, true);
+    DrawString(256, 230, "HALLWAYS OF MONNET", "Arial", 25, Red, true);
+    DrawString(256, 280, "premi enter per continuare...", "Arial", 13, Red, true);
+
+    while (true) {
+        char key = LastKey();
+        if (key == Enter) {
+            break;
+        }
+    }
 }
