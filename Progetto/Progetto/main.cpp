@@ -45,11 +45,10 @@ void run()
 
         if (SpriteX < 0) {
             Clear(Black);
-            DrawString(256, 256, "SEI UN CODARDO", "Arial", 24, Red, true);
-            Present();
+            DrawString(256, 256, "SEI UN CODARDO", "Arial", 34, Red, true);
             Wait(2000);
-            DrawString(256, 256, "GAME OVER", "Arial", 24, Red, true);
-            Present();
+            Clear(Black);
+            DrawString(256, 256, "GAME OVER", "Arial", 34, Red, true);
             Wait(2000);
             break;
         }
