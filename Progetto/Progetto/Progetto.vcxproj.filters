@@ -24,4 +24,9 @@
       <Filter>File di origine</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="sfondo_menu.png">
+      <Filter>File di risorse</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

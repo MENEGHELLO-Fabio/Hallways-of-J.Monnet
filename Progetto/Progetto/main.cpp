@@ -6,11 +6,14 @@
 
 using Image = int;
 
+
+//path delle immagini
 static constexpr const char BgPng[] = "sfondo.png";
 static constexpr const char SpriteStatic[] = "sprite_fermo.png";
 static constexpr const char SpritePunch[] = "sprite_pugno.png";
 static constexpr const char SpriteStaticRight[] = "sprite_fermo_right.png";
 static constexpr const char SpritePunchRight[] = "sprite_pugno_right.png";
+static constexpr const char SfondoMenu[] = "sfondo_menu.png";
 
 
 
@@ -66,13 +69,6 @@ void run()
 
         DrawImage(x, y, Background);
         switch (ultimotasto) {
-        case ' ':
-
-            DrawImage(x, y, Background);
-
-            DrawImage(SpriteX, SpriteY, punch);
-
-            break;
         case 'w':
             for (int i = 0; i < 5; i++) {
                 SpriteY -= 1;
@@ -98,7 +94,11 @@ void run()
             break;
         }
 
-
+		if (ultimotasto == ' ') {
+			DrawImage(SpriteX, SpriteY, punch);
+			Wait(100);
+			DrawImage(SpriteX, SpriteY, stat);
+		}
 
 
 
@@ -111,6 +111,14 @@ void run()
         EnemyY = EnemyMovementY(EnemyY, SpriteY);
 
         DrawImage(EnemyX, EnemyY, stat);
+		if(SpriteX == EnemyX-45  && SpriteY == EnemyY) {
+			DrawImage(EnemyX, EnemyY, punch);
+            Wait(500);
+            DrawImage(EnemyX, EnemyY, stat);
+			Wait(500);
+            Clear();
+			DrawImage(x, y, Background);
+		}
 
         Wait(delay);
 
@@ -121,12 +129,12 @@ void run()
 }
 
 int EnemyMovementX(int EnemyX, int SpriteX) {
-    if (EnemyX > SpriteX) {
+    if (EnemyX > SpriteX+45) {
 
         EnemyX -= 1;
 
     }
-    else if (EnemyX < SpriteX) {
+    else if (EnemyX < SpriteX-45) {
 
         EnemyX += 1;
 
@@ -151,7 +159,9 @@ int EnemyMovementY(int EnemyY, int SpriteY) {
 
 void MenuIniziale()
 {
-    Clear(Black);
+    Clear();
+    const Image BackgroundMenu = LoadImage(SfondoMenu);
+	DrawImage(0, 0, BackgroundMenu);
     DrawString(256, 200, "BENVENUTO SU", "Arial", 25, Red, true);
     DrawString(256, 230, "HALLWAYS OF MONNET", "Arial", 25, Red, true);
     DrawString(256, 280, "premi enter per continuare...", "Arial", 13, Red, true);

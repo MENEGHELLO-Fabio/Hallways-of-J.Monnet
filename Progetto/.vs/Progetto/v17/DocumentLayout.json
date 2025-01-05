@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Utente\\Desktop\\git_matzu\\Progetto\\",
+  "WorkspaceRootPath": "C:\\Users\\diego\\OneDrive\\Documenti\\Hallways-of-J.Monnet\\Progetto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{470EB953-EE63-44B6-ACAB-7059E447AE10}|Progetto\\Progetto.vcxproj|C:\\Users\\Utente\\Desktop\\git_matzu\\Progetto\\Progetto\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{470EB953-EE63-44B6-ACAB-7059E447AE10}|Progetto\\Progetto.vcxproj|C:\\Users\\diego\\OneDrive\\Documenti\\Hallways-of-J.Monnet\\Progetto\\Progetto\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{470EB953-EE63-44B6-ACAB-7059E447AE10}|Progetto\\Progetto.vcxproj|solutionrelative:Progetto\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\Utente\\Desktop\\git_matzu\\Progetto\\Progetto\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\diego\\OneDrive\\Documenti\\Hallways-of-J.Monnet\\Progetto\\Progetto\\main.cpp",
               "RelativeDocumentMoniker": "Progetto\\main.cpp",
-              "ToolTip": "C:\\Users\\Utente\\Desktop\\git_matzu\\Progetto\\Progetto\\main.cpp",
+              "ToolTip": "C:\\Users\\diego\\OneDrive\\Documenti\\Hallways-of-J.Monnet\\Progetto\\Progetto\\main.cpp",
               "RelativeToolTip": "Progetto\\main.cpp",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAAAJwAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAYwHYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-16T19:02:13.34Z",
               "EditorCaption": ""
