@@ -21,10 +21,9 @@ int EnemyMovementX(int EnemyX, int SpriteX);
 int EnemyMovementY(int EnemyY, int SpriteY);
 void MenuIniziale();
 
-
 void run()
 {
-
+    void UseDoubleBuffering(bool enabled);
     MenuIniziale();
 
     int x = 0;
@@ -38,6 +37,7 @@ void run()
     const Image Background = LoadImage(BgPng);
     const Image stat = LoadImage(SpriteStatic);
     const Image punch = LoadImage(SpritePunch);
+    const Image BackgroundMenu = LoadImage(SfondoMenu);
     /*const Image stat = LoadImage(SpriteStatic);
     const Image punch = LoadImage(SpritePunch);*/
 
@@ -51,20 +51,15 @@ void run()
 
     while (true) {
 
+        EnemyX = EnemyMovementX(EnemyX, SpriteX);
+        EnemyY = EnemyMovementY(EnemyY, SpriteY);
+
         ultimotasto = LastKey();
         Clear();
 
-
-        if (SpriteX < 0) {
-            Clear(Black);
-            DrawString(256, 256, "SEI UN CODARDO", "Arial", 34, Red, true);
-            Wait(2000);
-            Clear(Black);
-            DrawString(256, 256, "GAME OVER", "Arial", 34, Red, true);
-            Wait(2000);
+        if (SpriteX < 0 || SpriteX > 500) {
             break;
         }
-
 
 
         DrawImage(x, y, Background);
@@ -96,19 +91,14 @@ void run()
 
 		if (ultimotasto == ' ') {
 			DrawImage(SpriteX, SpriteY, punch);
+            DrawImage(EnemyX, EnemyY, stat);
 			Wait(100);
 			DrawImage(SpriteX, SpriteY, stat);
 		}
 
 
-
-
-
         DrawImage(x, y, Background);
         DrawImage(SpriteX, SpriteY, stat);
-
-        EnemyX = EnemyMovementX(EnemyX, SpriteX);
-        EnemyY = EnemyMovementY(EnemyY, SpriteY);
 
         DrawImage(EnemyX, EnemyY, stat);
 		if(SpriteX == EnemyX-45  && SpriteY == EnemyY) {
@@ -122,8 +112,19 @@ void run()
 
         Wait(delay);
 
+        Present();
 
     }
+    Clear();
+    DrawImage(0, 0, BackgroundMenu);
+    DrawString(256, 256, "SEI UN CODARDO", "Arial", 34, Red, true);
+    Wait(2000);
+    Clear();
+    DrawImage(0, 0, BackgroundMenu);
+    DrawString(256, 156, "GAME OVER", "Arial", 34, Red, true);
+    DrawRectangle(192, 300, 128, 50, White);
+    DrawString(256, 312, "RIPROVA", "Arial", 14, Black, true);
+    Wait(2000);
 
 
 }
@@ -173,3 +174,4 @@ void MenuIniziale()
         }
     }
 }
+
