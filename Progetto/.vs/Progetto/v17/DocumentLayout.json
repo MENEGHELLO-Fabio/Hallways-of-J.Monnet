@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{470EB953-EE63-44B6-ACAB-7059E447AE10}|Progetto\\Progetto.vcxproj|C:\\Users\\fabio\\OneDrive\\Documenti\\Progetto\\Progetto\\Progetto\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{470EB953-EE63-44B6-ACAB-7059E447AE10}|Progetto\\Progetto.vcxproj|solutionrelative:Progetto\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{470EB953-EE63-44B6-ACAB-7059E447AE10}|Progetto\\Progetto.vcxproj|C:\\Users\\fabio\\OneDrive\\Documenti\\Progetto\\Progetto\\Progetto\\immediate2d.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{470EB953-EE63-44B6-ACAB-7059E447AE10}|Progetto\\Progetto.vcxproj|solutionrelative:Progetto\\immediate2d.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "immediate2d.h",
+              "DocumentMoniker": "C:\\Users\\fabio\\OneDrive\\Documenti\\Progetto\\Progetto\\Progetto\\immediate2d.h",
+              "RelativeDocumentMoniker": "Progetto\\immediate2d.h",
+              "ToolTip": "C:\\Users\\fabio\\OneDrive\\Documenti\\Progetto\\Progetto\\Progetto\\immediate2d.h",
+              "RelativeToolTip": "Progetto\\immediate2d.h",
+              "ViewState": "AgIAAF4EAAAAAAAAAAApwEIEAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-06T21:01:13.809Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "Progetto\\main.cpp",
               "ToolTip": "C:\\Users\\fabio\\OneDrive\\Documenti\\Progetto\\Progetto\\Progetto\\main.cpp",
               "RelativeToolTip": "Progetto\\main.cpp",
-              "ViewState": "AgIAAFsAAAAAAAAAAAASwHIAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAiwFgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-16T19:02:13.34Z",
               "EditorCaption": ""
